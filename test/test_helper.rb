@@ -37,6 +37,7 @@ class Minitest::Test
 
   USED_TOKENS = {}
   def login_as(user_identifier)
+    Podio.client.stubs.post('/oauth/token') {[200, {}, {"access_token" => "wret", "expires_in" => 28799, "refresh_token" => "cdca6acfeb374598ba2790c9e5283b21"}]}
     user = fixtures[:users][user_identifier]
     USED_TOKENS[user[:mail]] ||= Podio.client.authenticate_with_credentials(user[:mail], user[:password])
     Podio.client.oauth_token = USED_TOKENS[user[:mail]]
