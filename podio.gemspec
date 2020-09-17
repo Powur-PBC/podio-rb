@@ -19,8 +19,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency('faraday', '~> 0.9')
   s.add_dependency('multi_json')
-  s.add_dependency('activesupport', '~> 6.0.3')
-  s.add_dependency('activemodel', '~> 6.0.3')
+  s.add_dependency('activesupport', '>= 5.2.4.3')
+  s.add_dependency('activemodel', '>= 5.2.4.3')
 
   s.add_development_dependency('rake')
   s.add_development_dependency('yard')
