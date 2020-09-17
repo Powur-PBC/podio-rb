@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ActivePodioTest < Test::Unit::TestCase
+class ActivePodioTest < Minitest::Test
 
   class TestAssociationModel < ActivePodio::Base
     property :string, :string
@@ -56,7 +56,7 @@ class ActivePodioTest < Test::Unit::TestCase
 
   test 'should instantiate model' do
     @test = TestModel.new
-    assert_not_nil @test
+    refute_nil @test
   end
 
   test 'should support string property' do

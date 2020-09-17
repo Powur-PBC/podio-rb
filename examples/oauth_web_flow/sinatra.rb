@@ -13,7 +13,6 @@
 # And point your browser to http://localhost:4567
 #
 
-require 'rubygems'
 require 'sinatra'
 require 'podio'
 

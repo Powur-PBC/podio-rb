@@ -17,21 +17,12 @@ Gem::Specification.new do |s|
   s.test_files        = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_paths     = ['lib']
 
-  s.has_rdoc          = false
-
-  s.add_dependency('faraday', ['>= 0.8.0', '< 0.10.0'])
+  s.add_dependency('faraday', '>= 1.0.0')
   s.add_dependency('multi_json')
-
-  if RUBY_VERSION < '1.9.3'
-    s.add_dependency('i18n', '<= 0.6.11')
-    s.add_dependency('activesupport', '~> 3.0')
-    s.add_dependency('activemodel', '~> 3.0')
-  else
-    s.add_dependency('activesupport', '>= 3.0')
-    s.add_dependency('activemodel', '>= 3.0')
-  end
+  s.add_dependency('activesupport', '~> 6.0.3')
+  s.add_dependency('activemodel', '~> 6.0.3')
 
   s.add_development_dependency('rake')
   s.add_development_dependency('yard')
-  s.add_development_dependency('test-unit-minitest', '>= 0.9.1')
+  s.add_development_dependency('minitest', '>= 5.14.0')
 end

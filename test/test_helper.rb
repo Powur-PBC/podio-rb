@@ -1,8 +1,9 @@
-require 'test/unit'
+require "minitest/autorun"
+require 'yaml'
 
 require 'podio'
 
-class Test::Unit::TestCase
+class Minitest::Test
 
   def setup
     set_podio_client
